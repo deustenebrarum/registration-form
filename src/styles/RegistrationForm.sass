@@ -1,0 +1,67 @@
+$primary_color: white
+$secondary_color: #98c6eb
+$max_width: 767px
+$grid_column_gap: 1rem
+
+.reg
+    position: relative
+    display: grid
+    grid-row-gap: 8px
+    margin: auto
+    input, select
+        padding: 4px
+        box-sizing: border-box
+        border-radius: 10px
+        border: 1px solid
+    input:focus
+        border-color: black !important
+    
+    .reg__info
+        display: grid
+        grid-template-columns: repeat(3, minmax(10px,1fr)) 
+        grid-column-gap: $grid_column_gap
+        @media screen and (max-width: $max_width)
+            grid-template-columns: 1fr
+            grid-row-gap: 10px
+
+    .reg__phonenumber
+        display: grid
+        grid-column-gap: 10px
+
+    .reg__sex
+        display: grid
+        span
+            display: inline-block
+            flex: 1 0 auto
+            background-color: white
+            padding: 1%
+            text-align: center
+            width: auto
+            border-radius: 10px
+            border: 1px solid
+            height: 24px
+            font-weight: normal
+    .reg__sex_select
+
+    .reg__birthday
+        display: grid
+    
+    .reg__client-group
+
+
+    .grid-column-double
+        display: grid
+        // grid-template-columns: 0.9fr 0.1fr 1fr
+        grid-template-columns: 1fr 1fr
+        grid-column-gap: $grid_column_gap
+        @media screen and (max-width: $max_width)
+            grid-template-columns: 1fr
+
+    .grid-column-triple
+        display: grid
+        // grid-template-columns: 1fr 0.1fr 1fr 0.1fr 1fr
+        grid-template-columns: repeat(3, minmax(10px,1fr)) 
+        grid-column-gap: $grid_column_gap
+        @media screen and (max-width: $max_width)
+            grid-template-columns: 1fr
+            grid-row-gap: 10px
